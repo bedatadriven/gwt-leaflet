@@ -9,10 +9,10 @@ public interface LeafletClientBundle
   extends ClientBundle {
 
 //    @Source("leaflet-src.js")
-    @Source("leaflet.js")
+    @Source("mapbox-v1.5.0.js")
     TextResource baseScript();
 
-    @Source("leaflet.css")
+    @Source("mapbox-v1.5.0.css")
     @CssResource.NotStrict
     CssResource css();
 
