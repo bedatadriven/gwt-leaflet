@@ -121,6 +121,7 @@ public class JSObject extends JavaScriptObject
     {
         return JSObjectHelper.getProperty(this, name);
     }
+   
 
     /**
      * Let's you inspect the names of properties of a javascript object.

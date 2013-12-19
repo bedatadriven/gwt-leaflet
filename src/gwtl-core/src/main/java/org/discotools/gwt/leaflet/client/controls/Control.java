@@ -4,6 +4,8 @@ import org.discotools.gwt.leaflet.client.Options;
 import org.discotools.gwt.leaflet.client.jsobject.JSObject;
 import org.discotools.gwt.leaflet.client.map.Map;
 
+import com.google.gwt.dom.client.Element;
+
 /**
  * <b>Base class for all Leaflet controls</b>
  * <p>
@@ -104,5 +106,14 @@ public class Control extends IControl {
 		ControlImpl.removeFrom(getJSObject(), map.getJSObject());
 		return this;
 	}
+	
+	public Element getContainer() {
+		return getNativeContainer(getJSObject());
+	}
+	
+	// TODO: change this to user .getContainer() when we upgrade to leaflet 0.7.x
+	private static native Element getNativeContainer(JSObject obj) /*-{
+		return obj._container;
+	}-*/;
 
 }

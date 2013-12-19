@@ -2,6 +2,7 @@ package org.discotools.gwt.leaflet.client.controls.zoom;
 
 import org.discotools.gwt.leaflet.client.Options;
 import org.discotools.gwt.leaflet.client.controls.Control;
+import org.discotools.gwt.leaflet.client.jsobject.JSObject;
 import org.discotools.gwt.leaflet.client.map.Map;
 
 /**
@@ -23,6 +24,10 @@ import org.discotools.gwt.leaflet.client.map.Map;
  * @see <a href="http://leaflet.cloudmade.com/reference.html#control-zoom">L.Control.Zoom (Leaflet API)</a>
  */
 public class Zoom extends Control {
+	
+	public Zoom(JSObject jsObject) {
+		super(jsObject);
+	}
 	
 	public Zoom(Options options) {
 		super(ZoomImpl.create(options.getJSObject()));

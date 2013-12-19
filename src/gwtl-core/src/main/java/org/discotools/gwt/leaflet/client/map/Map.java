@@ -1,6 +1,7 @@
 package org.discotools.gwt.leaflet.client.map;
 
 import org.discotools.gwt.leaflet.client.controls.IControl;
+import org.discotools.gwt.leaflet.client.controls.zoom.Zoom;
 import org.discotools.gwt.leaflet.client.events.handler.EventProvider;
 import org.discotools.gwt.leaflet.client.jsobject.JSObject;
 import org.discotools.gwt.leaflet.client.jsobject.JSObjectWrapper;
@@ -138,7 +139,11 @@ public class Map extends JSObjectWrapper implements EventProvider {
         return new LatLngBounds(MapImpl.getBounds(getJSObject()));
     }
 
-    /**
+    public Zoom getZoomControl() {
+    	return new Zoom(getJSObject().getProperty("zoomControl"));
+    }
+    
+	/**
      * Pans the map to a given center. Makes an animated pan if new center is not more than one screen away from the current one.
      * @param latLng
      */
