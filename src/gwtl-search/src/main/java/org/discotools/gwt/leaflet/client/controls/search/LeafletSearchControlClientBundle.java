@@ -11,7 +11,7 @@ public interface LeafletSearchControlClientBundle
   @Source( "leaflet-search.js" )
   TextResource baseScript();
 
-  @Source( "leaflet-search.css" )
+  @Source( "leaflet-search.gss" )
   @CssResource.NotStrict
   CssResource css();
 

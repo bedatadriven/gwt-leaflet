@@ -10,7 +10,7 @@ public interface LeafletLabelClientBundle
   @Source( "leaflet.label.js" )
   TextResource baseScript();
 
-  @Source( "leaflet.label.css" )
+  @Source( "leaflet.label.gss" )
   @CssResource.NotStrict
   CssResource css();
 }

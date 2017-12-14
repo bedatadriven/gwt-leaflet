@@ -12,7 +12,7 @@ public interface LeafletClientBundle
     @Source("leaflet.js")
     TextResource baseScript();
 
-    @Source("leaflet.css")
+    @Source("leaflet.gss")
     @CssResource.NotStrict
     CssResource css();
 

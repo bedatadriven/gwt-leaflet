@@ -56,13 +56,13 @@
 
 	<properties>
 		<!-- GWT properties -->
-		<gwt.version>2.5.1</gwt.version>
+		<gwt.version>2.8.2</gwt.version>
 		<!-- GAE properties -->
 		<gae.version>1.6.6</gae.version>
 		<gae.home>${user.home}/.m2/repository/com/google/appengine/appengine-java-sdk/${gae.version}/appengine-java-sdk-${gae.version}</gae.home>
 		<!-- GWT needs at least java 1.6 -->
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 		<!-- Don't let your Mac use a crazy non-standard encoding -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -198,7 +198,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>gwt-maven-plugin</artifactId>
-					<version>2.5.1</version>
+					<version>2.8.2</version>
 					<executions>
 						<!-- Copy deps into projects before packaging -->
 						<execution>
@@ -207,7 +207,7 @@
 								<goal>resources</goal>
 							</goals>
 						</execution>
-						<!-- Enable integration tests -->
+						 <!--Enable integration tests-->
 						<execution>
 							<id>integration-test</id>
 							<phase>integration-test</phase>
@@ -227,6 +227,7 @@
 						<logLevel>${compile.level}</logLevel>
 						<draftCompile>${compile.draft}</draftCompile>
 						<optimizationLevel>${compile.optimization.level}</optimizationLevel>
+						<sourceLevel>auto</sourceLevel>
 					</configuration>
 				</plugin>
 
@@ -410,8 +411,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.5.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 

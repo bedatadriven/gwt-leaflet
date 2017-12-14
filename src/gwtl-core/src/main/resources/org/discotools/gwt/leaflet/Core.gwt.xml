@@ -6,7 +6,10 @@
 	<inherits name="com.google.gwt.user.User" />
 	<inherits name="com.google.gwt.json.JSON" />
 	<inherits name="com.google.gwt.resources.Resources" />
-	
+
+	<set-configuration-property name="CssResource.enableGss" value="true" />
+
+
 	<!-- GWT Leaflet source paths -->
 	<source path="client"></source>
 	
